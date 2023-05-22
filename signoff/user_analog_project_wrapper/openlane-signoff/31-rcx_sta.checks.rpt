@@ -1,0 +1,1283 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= Typical Corner ===================================
+
+Startpoint: wb_rst_i (input port clocked by clk)
+Endpoint: o_FF[98] (recovery check against rising-edge clock clk)
+Path Group: asynchronous
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (propagated)
+                          1.00    1.00 ^ input external delay
+                  0.00    0.00    1.00 ^ wb_rst_i (in)
+     1    0.00                           wb_rst_i (net)
+                  0.00    0.00    1.00 ^ hold15149/A (sky130_fd_sc_hd__dlygate4sd3_1)
+                  0.06    0.55    1.55 ^ hold15149/X (sky130_fd_sc_hd__dlygate4sd3_1)
+     1    0.00                           net16035 (net)
+                  0.06    0.00    1.55 ^ hold1365/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.04    0.26    1.80 ^ hold1365/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.00                           net2251 (net)
+                  0.04    0.00    1.80 ^ hold15150/A (sky130_fd_sc_hd__dlygate4sd3_1)
+                  0.05    0.56    2.36 ^ hold15150/X (sky130_fd_sc_hd__dlygate4sd3_1)
+     1    0.00                           net16036 (net)
+                  0.05    0.00    2.36 ^ hold1362/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.05    0.26    2.62 ^ hold1362/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.00                           net2248 (net)
+                  0.05    0.00    2.62 ^ hold1366/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.04    0.26    2.88 ^ hold1366/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.00                           net2252 (net)
+                  0.04    0.00    2.88 ^ input285/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.05    0.09    2.97 ^ input285/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           net285 (net)
+                  0.05    0.00    2.97 ^ hold1367/A (sky130_fd_sc_hd__dlygate4sd3_1)
+                  0.12    0.62    3.59 ^ hold1367/X (sky130_fd_sc_hd__dlygate4sd3_1)
+     1    0.01                           net2253 (net)
+                  0.12    0.00    3.59 ^ hold1363/A (sky130_fd_sc_hd__buf_12)
+                  0.44    0.40    3.99 ^ hold1363/X (sky130_fd_sc_hd__buf_12)
+     5    0.41                           net2249 (net)
+                  0.44    0.01    4.00 ^ fanout614/A (sky130_fd_sc_hd__buf_12)
+                  0.16    0.26    4.26 ^ fanout614/X (sky130_fd_sc_hd__buf_12)
+     5    0.13                           net614 (net)
+                  0.16    0.00    4.26 ^ load_slew616/A (sky130_fd_sc_hd__buf_12)
+                  0.20    0.24    4.50 ^ load_slew616/X (sky130_fd_sc_hd__buf_12)
+     1    0.19                           net616 (net)
+                  0.29    0.10    4.60 ^ wire615/A (sky130_fd_sc_hd__buf_12)
+                  0.21    0.25    4.86 ^ wire615/X (sky130_fd_sc_hd__buf_12)
+     2    0.22                           net615 (net)
+                  0.40    0.18    5.03 ^ fanout607/A (sky130_fd_sc_hd__buf_12)
+                  0.41    0.41    5.44 ^ fanout607/X (sky130_fd_sc_hd__buf_12)
+     8    0.37                           net607 (net)
+                  0.44    0.09    5.53 ^ fanout606/A (sky130_fd_sc_hd__buf_12)
+                  0.33    0.30    5.83 ^ fanout606/X (sky130_fd_sc_hd__buf_12)
+     9    0.30                           net606 (net)
+                  0.40    0.13    5.96 ^ fanout603/A (sky130_fd_sc_hd__buf_8)
+                  0.19    0.27    6.23 ^ fanout603/X (sky130_fd_sc_hd__buf_8)
+     7    0.11                           net603 (net)
+                  0.20    0.04    6.27 ^ fanout602/A (sky130_fd_sc_hd__buf_6)
+                  0.21    0.27    6.53 ^ fanout602/X (sky130_fd_sc_hd__buf_6)
+    11    0.10                           net602 (net)
+                  0.21    0.02    6.55 ^ fanout601/A (sky130_fd_sc_hd__clkbuf_4)
+                  0.21    0.33    6.88 ^ fanout601/X (sky130_fd_sc_hd__clkbuf_4)
+     7    0.07                           net601 (net)
+                  0.21    0.01    6.89 ^ fanout600/A (sky130_fd_sc_hd__clkbuf_4)
+                  0.17    0.30    7.19 ^ fanout600/X (sky130_fd_sc_hd__clkbuf_4)
+     6    0.05                           net600 (net)
+                  0.17    0.01    7.19 ^ fanout599/A (sky130_fd_sc_hd__buf_4)
+                  0.19    0.27    7.46 ^ fanout599/X (sky130_fd_sc_hd__buf_4)
+    10    0.07                           net599 (net)
+                  0.19    0.01    7.47 ^ o_FF[98]/RESET_B (sky130_fd_sc_hd__dfrtp_1)
+                                  7.47   data arrival time
+
+                         25.00   25.00   clock clk (rise edge)
+                          0.00   25.00   clock source latency
+                  0.10    0.00   25.00 ^ wb_clk_i (in)
+     2    0.27                           wb_clk_i (net)
+                  0.41    0.15   25.15 ^ clkbuf_0_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.11    0.26   25.41 ^ clkbuf_0_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.08                           clknet_0_wb_clk_i (net)
+                  0.11    0.01   25.42 ^ clkbuf_1_0_0_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.18   25.60 ^ clkbuf_1_0_0_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_8)
+     1    0.05                           clknet_1_0_0_wb_clk_i (net)
+                  0.11    0.01   25.61 ^ clkbuf_1_0_1_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.22   25.84 ^ clkbuf_1_0_1_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_8)
+     4    0.09                           clknet_1_0_1_wb_clk_i (net)
+                  0.16    0.01   25.85 ^ clkbuf_2_1_0_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.12    0.21   26.05 ^ clkbuf_2_1_0_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.06                           clknet_2_1_0_wb_clk_i (net)
+                  0.13    0.02   26.07 ^ clkbuf_2_1_1_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.15    0.22   26.29 ^ clkbuf_2_1_1_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.08                           clknet_2_1_1_wb_clk_i (net)
+                  0.15    0.01   26.30 ^ clkbuf_3_2_0_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.13    0.21   26.51 ^ clkbuf_3_2_0_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.07                           clknet_3_2_0_wb_clk_i (net)
+                  0.13    0.01   26.53 ^ clkbuf_4_5_0_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.54    0.39   26.92 ^ clkbuf_4_5_0_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_8)
+    15    0.32                           clknet_4_5_0_wb_clk_i (net)
+                  0.61    0.13   27.05 ^ clkbuf_leaf_138_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.05    0.24   27.29 ^ clkbuf_leaf_138_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_16)
+     4    0.01                           clknet_leaf_138_wb_clk_i (net)
+                  0.05    0.00   27.29 ^ o_FF[98]/CLK (sky130_fd_sc_hd__dfrtp_1)
+                         -0.10   27.19   clock uncertainty
+                          0.00   27.19   clock reconvergence pessimism
+                          0.19   27.39   library recovery time
+                                 27.39   data required time
+-----------------------------------------------------------------------------
+                                 27.39   data required time
+                                 -7.47   data arrival time
+-----------------------------------------------------------------------------
+                                 19.92   slack (MET)
+
+
+Startpoint: la_data_in[38] (input port clocked by clk)
+Endpoint: i_FF[230] (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (propagated)
+                          1.00    1.00 ^ input external delay
+                  0.00    0.00    1.00 ^ la_data_in[38] (in)
+     2    0.02                           la_data_in[38] (net)
+                  0.00    0.00    1.00 ^ hold12552/A (sky130_fd_sc_hd__dlygate4sd3_1)
+                  0.16    0.64    1.64 ^ hold12552/X (sky130_fd_sc_hd__dlygate4sd3_1)
+     1    0.01                           net13438 (net)
+                  0.16    0.00    1.64 ^ hold9378/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.15    0.37    2.01 ^ hold9378/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.01                           net10264 (net)
+                  0.15    0.00    2.01 ^ hold12553/A (sky130_fd_sc_hd__dlygate4sd3_1)
+                  0.16    0.68    2.70 ^ hold12553/X (sky130_fd_sc_hd__dlygate4sd3_1)
+     1    0.01                           net13439 (net)
+                  0.16    0.00    2.70 ^ hold6242/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.05    0.30    3.00 ^ hold6242/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.00                           net7128 (net)
+                  0.05    0.00    3.00 ^ hold12554/A (sky130_fd_sc_hd__dlygate4sd3_1)
+                  0.09    0.60    3.59 ^ hold12554/X (sky130_fd_sc_hd__dlygate4sd3_1)
+     1    0.01                           net13440 (net)
+                  0.09    0.00    3.59 ^ hold9379/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.09    0.31    3.90 ^ hold9379/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.01                           net10265 (net)
+                  0.09    0.00    3.90 ^ hold12555/A (sky130_fd_sc_hd__dlygate4sd3_1)
+                  0.10    0.62    4.52 ^ hold12555/X (sky130_fd_sc_hd__dlygate4sd3_1)
+     1    0.01                           net13441 (net)
+                  0.10    0.00    4.52 ^ hold2436/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.07    0.30    4.82 ^ hold2436/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.01                           net3322 (net)
+                  0.07    0.00    4.82 ^ hold12556/A (sky130_fd_sc_hd__dlygate4sd3_1)
+                  0.12    0.63    5.45 ^ hold12556/X (sky130_fd_sc_hd__dlygate4sd3_1)
+     1    0.01                           net13442 (net)
+                  0.12    0.00    5.45 ^ hold9380/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.06    0.29    5.74 ^ hold9380/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.00                           net10266 (net)
+                  0.06    0.00    5.74 ^ hold12557/A (sky130_fd_sc_hd__dlygate4sd3_1)
+                  0.09    0.60    6.33 ^ hold12557/X (sky130_fd_sc_hd__dlygate4sd3_1)
+     1    0.01                           net13443 (net)
+                  0.09    0.00    6.33 ^ hold6243/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.11    0.32    6.65 ^ hold6243/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.01                           net7129 (net)
+                  0.11    0.00    6.65 ^ hold12558/A (sky130_fd_sc_hd__dlygate4sd3_1)
+                  0.13    0.65    7.31 ^ hold12558/X (sky130_fd_sc_hd__dlygate4sd3_1)
+     1    0.01                           net13444 (net)
+                  0.13    0.00    7.31 ^ hold9381/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.07    0.31    7.61 ^ hold9381/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.01                           net10267 (net)
+                  0.07    0.00    7.61 ^ hold12559/A (sky130_fd_sc_hd__dlygate4sd3_1)
+                  0.06    0.58    8.19 ^ hold12559/X (sky130_fd_sc_hd__dlygate4sd3_1)
+     1    0.00                           net13445 (net)
+                  0.06    0.00    8.19 ^ hold533/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.07    0.28    8.47 ^ hold533/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.01                           net1419 (net)
+                  0.07    0.00    8.47 ^ hold12560/A (sky130_fd_sc_hd__dlygate4sd3_1)
+                  0.06    0.58    9.05 ^ hold12560/X (sky130_fd_sc_hd__dlygate4sd3_1)
+     1    0.00                           net13446 (net)
+                  0.06    0.00    9.05 ^ hold9382/A (sky130_fd_sc_hd__clkdlybuf4s50_1)
+                  0.07    0.52    9.57 ^ hold9382/X (sky130_fd_sc_hd__clkdlybuf4s50_1)
+     1    0.01                           net10268 (net)
+                  0.07    0.00    9.57 ^ hold12561/A (sky130_fd_sc_hd__dlygate4sd3_1)
+                  0.13    0.64   10.21 ^ hold12561/X (sky130_fd_sc_hd__dlygate4sd3_1)
+     1    0.01                           net13447 (net)
+                  0.13    0.00   10.21 ^ hold6244/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.17    0.38   10.59 ^ hold6244/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.02                           net7130 (net)
+                  0.17    0.00   10.59 ^ hold9383/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.16    0.39   10.98 ^ hold9383/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.02                           net10269 (net)
+                  0.16    0.00   10.98 ^ hold2437/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.21    0.42   11.40 ^ hold2437/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.02                           net3323 (net)
+                  0.21    0.00   11.40 ^ hold9384/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.05    0.31   11.72 ^ hold9384/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.00                           net10270 (net)
+                  0.05    0.00   11.72 ^ hold6245/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.06    0.27   11.99 ^ hold6245/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.00                           net7131 (net)
+                  0.06    0.00   11.99 ^ input87/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.21    0.21   12.20 ^ input87/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.02                           net87 (net)
+                  0.21    0.00   12.20 ^ hold6246/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.17    0.40   12.60 ^ hold6246/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.02                           net7132 (net)
+                  0.17    0.00   12.60 ^ hold2438/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.06    0.31   12.91 ^ hold2438/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.00                           net3324 (net)
+                  0.06    0.00   12.91 ^ hold6247/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.10    0.31   13.22 ^ hold6247/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.01                           net7133 (net)
+                  0.10    0.00   13.22 ^ hold534/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.11    0.33   13.55 ^ hold534/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.01                           net1420 (net)
+                  0.11    0.00   13.55 ^ hold6248/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.11    0.33   13.88 ^ hold6248/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.01                           net7134 (net)
+                  0.11    0.00   13.88 ^ hold2439/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.08    0.31   14.19 ^ hold2439/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.01                           net3325 (net)
+                  0.08    0.00   14.19 ^ hold6249/A (sky130_fd_sc_hd__clkdlybuf4s25_1)
+                  0.09    0.31   14.49 ^ hold6249/X (sky130_fd_sc_hd__clkdlybuf4s25_1)
+     1    0.01                           net7135 (net)
+                  0.09    0.00   14.49 ^ i_FF[230]/D (sky130_fd_sc_hd__dfrtp_1)
+                                 14.49   data arrival time
+
+                         25.00   25.00   clock clk (rise edge)
+                          0.00   25.00   clock source latency
+                  0.10    0.00   25.00 ^ wb_clk_i (in)
+     2    0.27                           wb_clk_i (net)
+                  0.41    0.15   25.15 ^ clkbuf_0_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.11    0.26   25.41 ^ clkbuf_0_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.08                           clknet_0_wb_clk_i (net)
+                  0.11    0.01   25.42 ^ clkbuf_1_1_0_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.18   25.60 ^ clkbuf_1_1_0_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_8)
+     1    0.05                           clknet_1_1_0_wb_clk_i (net)
+                  0.11    0.01   25.61 ^ clkbuf_1_1_1_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.14    0.21   25.82 ^ clkbuf_1_1_1_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_8)
+     4    0.07                           clknet_1_1_1_wb_clk_i (net)
+                  0.14    0.01   25.83 ^ clkbuf_2_3_0_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.12    0.20   26.03 ^ clkbuf_2_3_0_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.06                           clknet_2_3_0_wb_clk_i (net)
+                  0.13    0.02   26.04 ^ clkbuf_2_3_1_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.15    0.22   26.26 ^ clkbuf_2_3_1_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.08                           clknet_2_3_1_wb_clk_i (net)
+                  0.15    0.01   26.27 ^ clkbuf_3_7_0_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.14    0.22   26.49 ^ clkbuf_3_7_0_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.07                           clknet_3_7_0_wb_clk_i (net)
+                  0.14    0.01   26.50 ^ clkbuf_4_14_0_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.44    0.36   26.86 ^ clkbuf_4_14_0_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_8)
+    12    0.26                           clknet_4_14_0_wb_clk_i (net)
+                  0.47    0.09   26.95 ^ clkbuf_leaf_65_wb_clk_i/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.05    0.22   27.16 ^ clkbuf_leaf_65_wb_clk_i/X (sky130_fd_sc_hd__clkbuf_16)
+     3    0.01                           clknet_leaf_65_wb_clk_i (net)
+                  0.05    0.00   27.16 ^ i_FF[230]/CLK (sky130_fd_sc_hd__dfrtp_1)
+                         -0.10   27.06   clock uncertainty
+                          0.00   27.06   clock reconvergence pessimism
+                         -0.07   26.99   library setup time
+                                 26.99   data required time
+-----------------------------------------------------------------------------
+                                 26.99   data required time
+                                -14.49   data arrival time
+-----------------------------------------------------------------------------
+                                 12.50   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= Typical Corner ===================================
+
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+input284/X                               10     49    -39 (VIOLATED)
+input356/X                               10     31    -21 (VIOLATED)
+clkbuf_4_13_0_wb_clk_i/X                 10     27    -17 (VIOLATED)
+fanout652/X                              10     21    -11 (VIOLATED)
+clkbuf_4_15_0_wb_clk_i/X                 10     18     -8 (VIOLATED)
+clkbuf_4_0_0_wb_clk_i/X                  10     16     -6 (VIOLATED)
+clkbuf_4_10_0_wb_clk_i/X                 10     16     -6 (VIOLATED)
+fanout588/X                              10     16     -6 (VIOLATED)
+clkbuf_4_5_0_wb_clk_i/X                  10     15     -5 (VIOLATED)
+clkbuf_4_3_0_wb_clk_i/X                  10     13     -3 (VIOLATED)
+clkbuf_4_4_0_wb_clk_i/X                  10     13     -3 (VIOLATED)
+clkbuf_4_14_0_wb_clk_i/X                 10     12     -2 (VIOLATED)
+clkbuf_4_1_0_wb_clk_i/X                  10     12     -2 (VIOLATED)
+clkbuf_4_7_0_wb_clk_i/X                  10     12     -2 (VIOLATED)
+clkbuf_4_8_0_wb_clk_i/X                  10     12     -2 (VIOLATED)
+fanout641/X                              10     12     -2 (VIOLATED)
+fanout654/X                              10     12     -2 (VIOLATED)
+clkbuf_4_11_0_wb_clk_i/X                 10     11        (VIOLATED)
+fanout602/X                              10     11        (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 675 unannotated drivers.
+ gpio_analog[0]
+ gpio_analog[10]
+ gpio_analog[11]
+ gpio_analog[12]
+ gpio_analog[13]
+ gpio_analog[14]
+ gpio_analog[15]
+ gpio_analog[16]
+ gpio_analog[17]
+ gpio_analog[1]
+ gpio_analog[2]
+ gpio_analog[3]
+ gpio_analog[4]
+ gpio_analog[5]
+ gpio_analog[6]
+ gpio_analog[7]
+ gpio_analog[8]
+ gpio_analog[9]
+ gpio_noesd[0]
+ gpio_noesd[10]
+ gpio_noesd[11]
+ gpio_noesd[12]
+ gpio_noesd[13]
+ gpio_noesd[14]
+ gpio_noesd[15]
+ gpio_noesd[16]
+ gpio_noesd[17]
+ gpio_noesd[1]
+ gpio_noesd[2]
+ gpio_noesd[3]
+ gpio_noesd[4]
+ gpio_noesd[5]
+ gpio_noesd[6]
+ gpio_noesd[7]
+ gpio_noesd[8]
+ gpio_noesd[9]
+ io_analog[0]
+ io_analog[10]
+ io_analog[1]
+ io_analog[2]
+ io_analog[3]
+ io_analog[4]
+ io_analog[5]
+ io_analog[6]
+ io_analog[7]
+ io_analog[8]
+ io_analog[9]
+ io_clamp_high[0]
+ io_clamp_high[1]
+ io_clamp_high[2]
+ io_clamp_low[0]
+ io_clamp_low[1]
+ io_clamp_low[2]
+ io_in_3v3[0]
+ io_in_3v3[10]
+ io_in_3v3[11]
+ io_in_3v3[12]
+ io_in_3v3[13]
+ io_in_3v3[14]
+ io_in_3v3[15]
+ io_in_3v3[16]
+ io_in_3v3[17]
+ io_in_3v3[18]
+ io_in_3v3[19]
+ io_in_3v3[1]
+ io_in_3v3[20]
+ io_in_3v3[21]
+ io_in_3v3[22]
+ io_in_3v3[23]
+ io_in_3v3[24]
+ io_in_3v3[25]
+ io_in_3v3[26]
+ io_in_3v3[2]
+ io_in_3v3[3]
+ io_in_3v3[4]
+ io_in_3v3[5]
+ io_in_3v3[6]
+ io_in_3v3[7]
+ io_in_3v3[8]
+ io_in_3v3[9]
+ i_FF\[0\]/Q
+ i_FF\[100\]/Q
+ i_FF\[101\]/Q
+ i_FF\[102\]/Q
+ i_FF\[103\]/Q
+ i_FF\[104\]/Q
+ i_FF\[105\]/Q
+ i_FF\[106\]/Q
+ i_FF\[107\]/Q
+ i_FF\[108\]/Q
+ i_FF\[109\]/Q
+ i_FF\[10\]/Q
+ i_FF\[110\]/Q
+ i_FF\[111\]/Q
+ i_FF\[112\]/Q
+ i_FF\[113\]/Q
+ i_FF\[114\]/Q
+ i_FF\[115\]/Q
+ i_FF\[116\]/Q
+ i_FF\[117\]/Q
+ i_FF\[118\]/Q
+ i_FF\[119\]/Q
+ i_FF\[11\]/Q
+ i_FF\[120\]/Q
+ i_FF\[121\]/Q
+ i_FF\[122\]/Q
+ i_FF\[123\]/Q
+ i_FF\[124\]/Q
+ i_FF\[125\]/Q
+ i_FF\[126\]/Q
+ i_FF\[127\]/Q
+ i_FF\[128\]/Q
+ i_FF\[129\]/Q
+ i_FF\[12\]/Q
+ i_FF\[130\]/Q
+ i_FF\[131\]/Q
+ i_FF\[132\]/Q
+ i_FF\[133\]/Q
+ i_FF\[134\]/Q
+ i_FF\[135\]/Q
+ i_FF\[136\]/Q
+ i_FF\[137\]/Q
+ i_FF\[138\]/Q
+ i_FF\[139\]/Q
+ i_FF\[13\]/Q
+ i_FF\[140\]/Q
+ i_FF\[141\]/Q
+ i_FF\[142\]/Q
+ i_FF\[143\]/Q
+ i_FF\[144\]/Q
+ i_FF\[145\]/Q
+ i_FF\[146\]/Q
+ i_FF\[147\]/Q
+ i_FF\[148\]/Q
+ i_FF\[149\]/Q
+ i_FF\[14\]/Q
+ i_FF\[150\]/Q
+ i_FF\[151\]/Q
+ i_FF\[152\]/Q
+ i_FF\[153\]/Q
+ i_FF\[154\]/Q
+ i_FF\[155\]/Q
+ i_FF\[156\]/Q
+ i_FF\[157\]/Q
+ i_FF\[158\]/Q
+ i_FF\[159\]/Q
+ i_FF\[15\]/Q
+ i_FF\[160\]/Q
+ i_FF\[161\]/Q
+ i_FF\[162\]/Q
+ i_FF\[163\]/Q
+ i_FF\[164\]/Q
+ i_FF\[165\]/Q
+ i_FF\[166\]/Q
+ i_FF\[167\]/Q
+ i_FF\[168\]/Q
+ i_FF\[169\]/Q
+ i_FF\[16\]/Q
+ i_FF\[170\]/Q
+ i_FF\[171\]/Q
+ i_FF\[172\]/Q
+ i_FF\[173\]/Q
+ i_FF\[174\]/Q
+ i_FF\[175\]/Q
+ i_FF\[176\]/Q
+ i_FF\[177\]/Q
+ i_FF\[178\]/Q
+ i_FF\[179\]/Q
+ i_FF\[17\]/Q
+ i_FF\[180\]/Q
+ i_FF\[181\]/Q
+ i_FF\[182\]/Q
+ i_FF\[183\]/Q
+ i_FF\[184\]/Q
+ i_FF\[185\]/Q
+ i_FF\[186\]/Q
+ i_FF\[187\]/Q
+ i_FF\[188\]/Q
+ i_FF\[189\]/Q
+ i_FF\[18\]/Q
+ i_FF\[190\]/Q
+ i_FF\[191\]/Q
+ i_FF\[192\]/Q
+ i_FF\[193\]/Q
+ i_FF\[194\]/Q
+ i_FF\[195\]/Q
+ i_FF\[196\]/Q
+ i_FF\[197\]/Q
+ i_FF\[198\]/Q
+ i_FF\[199\]/Q
+ i_FF\[19\]/Q
+ i_FF\[1\]/Q
+ i_FF\[200\]/Q
+ i_FF\[201\]/Q
+ i_FF\[202\]/Q
+ i_FF\[203\]/Q
+ i_FF\[204\]/Q
+ i_FF\[205\]/Q
+ i_FF\[206\]/Q
+ i_FF\[207\]/Q
+ i_FF\[208\]/Q
+ i_FF\[209\]/Q
+ i_FF\[20\]/Q
+ i_FF\[210\]/Q
+ i_FF\[211\]/Q
+ i_FF\[212\]/Q
+ i_FF\[213\]/Q
+ i_FF\[214\]/Q
+ i_FF\[215\]/Q
+ i_FF\[216\]/Q
+ i_FF\[217\]/Q
+ i_FF\[218\]/Q
+ i_FF\[219\]/Q
+ i_FF\[21\]/Q
+ i_FF\[220\]/Q
+ i_FF\[221\]/Q
+ i_FF\[222\]/Q
+ i_FF\[223\]/Q
+ i_FF\[224\]/Q
+ i_FF\[225\]/Q
+ i_FF\[226\]/Q
+ i_FF\[227\]/Q
+ i_FF\[228\]/Q
+ i_FF\[229\]/Q
+ i_FF\[22\]/Q
+ i_FF\[230\]/Q
+ i_FF\[231\]/Q
+ i_FF\[232\]/Q
+ i_FF\[233\]/Q
+ i_FF\[234\]/Q
+ i_FF\[235\]/Q
+ i_FF\[236\]/Q
+ i_FF\[237\]/Q
+ i_FF\[238\]/Q
+ i_FF\[239\]/Q
+ i_FF\[23\]/Q
+ i_FF\[240\]/Q
+ i_FF\[241\]/Q
+ i_FF\[242\]/Q
+ i_FF\[243\]/Q
+ i_FF\[244\]/Q
+ i_FF\[245\]/Q
+ i_FF\[246\]/Q
+ i_FF\[247\]/Q
+ i_FF\[248\]/Q
+ i_FF\[249\]/Q
+ i_FF\[24\]/Q
+ i_FF\[250\]/Q
+ i_FF\[251\]/Q
+ i_FF\[252\]/Q
+ i_FF\[253\]/Q
+ i_FF\[254\]/Q
+ i_FF\[255\]/Q
+ i_FF\[256\]/Q
+ i_FF\[257\]/Q
+ i_FF\[258\]/Q
+ i_FF\[259\]/Q
+ i_FF\[25\]/Q
+ i_FF\[260\]/Q
+ i_FF\[261\]/Q
+ i_FF\[262\]/Q
+ i_FF\[263\]/Q
+ i_FF\[264\]/Q
+ i_FF\[265\]/Q
+ i_FF\[266\]/Q
+ i_FF\[267\]/Q
+ i_FF\[268\]/Q
+ i_FF\[269\]/Q
+ i_FF\[26\]/Q
+ i_FF\[270\]/Q
+ i_FF\[271\]/Q
+ i_FF\[272\]/Q
+ i_FF\[273\]/Q
+ i_FF\[274\]/Q
+ i_FF\[275\]/Q
+ i_FF\[276\]/Q
+ i_FF\[277\]/Q
+ i_FF\[278\]/Q
+ i_FF\[279\]/Q
+ i_FF\[27\]/Q
+ i_FF\[280\]/Q
+ i_FF\[281\]/Q
+ i_FF\[282\]/Q
+ i_FF\[283\]/Q
+ i_FF\[284\]/Q
+ i_FF\[285\]/Q
+ i_FF\[286\]/Q
+ i_FF\[287\]/Q
+ i_FF\[288\]/Q
+ i_FF\[289\]/Q
+ i_FF\[28\]/Q
+ i_FF\[290\]/Q
+ i_FF\[291\]/Q
+ i_FF\[292\]/Q
+ i_FF\[293\]/Q
+ i_FF\[294\]/Q
+ i_FF\[295\]/Q
+ i_FF\[296\]/Q
+ i_FF\[297\]/Q
+ i_FF\[298\]/Q
+ i_FF\[299\]/Q
+ i_FF\[29\]/Q
+ i_FF\[2\]/Q
+ i_FF\[300\]/Q
+ i_FF\[301\]/Q
+ i_FF\[302\]/Q
+ i_FF\[303\]/Q
+ i_FF\[304\]/Q
+ i_FF\[305\]/Q
+ i_FF\[306\]/Q
+ i_FF\[307\]/Q
+ i_FF\[308\]/Q
+ i_FF\[309\]/Q
+ i_FF\[30\]/Q
+ i_FF\[310\]/Q
+ i_FF\[311\]/Q
+ i_FF\[312\]/Q
+ i_FF\[313\]/Q
+ i_FF\[314\]/Q
+ i_FF\[315\]/Q
+ i_FF\[316\]/Q
+ i_FF\[317\]/Q
+ i_FF\[318\]/Q
+ i_FF\[319\]/Q
+ i_FF\[31\]/Q
+ i_FF\[320\]/Q
+ i_FF\[321\]/Q
+ i_FF\[322\]/Q
+ i_FF\[323\]/Q
+ i_FF\[324\]/Q
+ i_FF\[325\]/Q
+ i_FF\[326\]/Q
+ i_FF\[327\]/Q
+ i_FF\[328\]/Q
+ i_FF\[329\]/Q
+ i_FF\[32\]/Q
+ i_FF\[330\]/Q
+ i_FF\[331\]/Q
+ i_FF\[332\]/Q
+ i_FF\[333\]/Q
+ i_FF\[334\]/Q
+ i_FF\[335\]/Q
+ i_FF\[336\]/Q
+ i_FF\[337\]/Q
+ i_FF\[338\]/Q
+ i_FF\[339\]/Q
+ i_FF\[33\]/Q
+ i_FF\[340\]/Q
+ i_FF\[341\]/Q
+ i_FF\[342\]/Q
+ i_FF\[343\]/Q
+ i_FF\[344\]/Q
+ i_FF\[345\]/Q
+ i_FF\[346\]/Q
+ i_FF\[347\]/Q
+ i_FF\[348\]/Q
+ i_FF\[349\]/Q
+ i_FF\[34\]/Q
+ i_FF\[350\]/Q
+ i_FF\[351\]/Q
+ i_FF\[352\]/Q
+ i_FF\[353\]/Q
+ i_FF\[35\]/Q
+ i_FF\[36\]/Q
+ i_FF\[37\]/Q
+ i_FF\[38\]/Q
+ i_FF\[39\]/Q
+ i_FF\[3\]/Q
+ i_FF\[40\]/Q
+ i_FF\[41\]/Q
+ i_FF\[42\]/Q
+ i_FF\[43\]/Q
+ i_FF\[44\]/Q
+ i_FF\[45\]/Q
+ i_FF\[46\]/Q
+ i_FF\[47\]/Q
+ i_FF\[48\]/Q
+ i_FF\[49\]/Q
+ i_FF\[4\]/Q
+ i_FF\[50\]/Q
+ i_FF\[51\]/Q
+ i_FF\[52\]/Q
+ i_FF\[53\]/Q
+ i_FF\[54\]/Q
+ i_FF\[55\]/Q
+ i_FF\[56\]/Q
+ i_FF\[57\]/Q
+ i_FF\[58\]/Q
+ i_FF\[59\]/Q
+ i_FF\[5\]/Q
+ i_FF\[60\]/Q
+ i_FF\[61\]/Q
+ i_FF\[62\]/Q
+ i_FF\[63\]/Q
+ i_FF\[64\]/Q
+ i_FF\[65\]/Q
+ i_FF\[66\]/Q
+ i_FF\[67\]/Q
+ i_FF\[68\]/Q
+ i_FF\[69\]/Q
+ i_FF\[6\]/Q
+ i_FF\[70\]/Q
+ i_FF\[71\]/Q
+ i_FF\[72\]/Q
+ i_FF\[73\]/Q
+ i_FF\[74\]/Q
+ i_FF\[75\]/Q
+ i_FF\[76\]/Q
+ i_FF\[77\]/Q
+ i_FF\[78\]/Q
+ i_FF\[79\]/Q
+ i_FF\[7\]/Q
+ i_FF\[80\]/Q
+ i_FF\[81\]/Q
+ i_FF\[82\]/Q
+ i_FF\[83\]/Q
+ i_FF\[84\]/Q
+ i_FF\[85\]/Q
+ i_FF\[86\]/Q
+ i_FF\[87\]/Q
+ i_FF\[88\]/Q
+ i_FF\[89\]/Q
+ i_FF\[8\]/Q
+ i_FF\[90\]/Q
+ i_FF\[91\]/Q
+ i_FF\[92\]/Q
+ i_FF\[93\]/Q
+ i_FF\[94\]/Q
+ i_FF\[95\]/Q
+ i_FF\[96\]/Q
+ i_FF\[97\]/Q
+ i_FF\[98\]/Q
+ i_FF\[99\]/Q
+ i_FF\[9\]/Q
+ o_FF\[0\]_878/HI
+ o_FF\[100\]_879/HI
+ o_FF\[101\]_880/HI
+ o_FF\[102\]_881/HI
+ o_FF\[103\]_882/HI
+ o_FF\[104\]_883/HI
+ o_FF\[105\]_884/HI
+ o_FF\[106\]_885/HI
+ o_FF\[107\]_886/HI
+ o_FF\[108\]_658/HI
+ o_FF\[109\]_659/HI
+ o_FF\[10\]_660/HI
+ o_FF\[110\]_661/HI
+ o_FF\[111\]_662/HI
+ o_FF\[112\]_663/HI
+ o_FF\[113\]_664/HI
+ o_FF\[114\]_665/HI
+ o_FF\[115\]_666/HI
+ o_FF\[116\]_667/HI
+ o_FF\[117\]_668/HI
+ o_FF\[118\]_669/HI
+ o_FF\[119\]_670/HI
+ o_FF\[11\]_671/HI
+ o_FF\[120\]_672/HI
+ o_FF\[121\]_673/HI
+ o_FF\[122\]_674/HI
+ o_FF\[123\]_675/HI
+ o_FF\[124\]_676/HI
+ o_FF\[125\]_677/HI
+ o_FF\[126\]_678/HI
+ o_FF\[127\]_679/HI
+ o_FF\[128\]_680/HI
+ o_FF\[129\]_681/HI
+ o_FF\[12\]_682/HI
+ o_FF\[130\]_683/HI
+ o_FF\[131\]_684/HI
+ o_FF\[132\]_685/HI
+ o_FF\[133\]_686/HI
+ o_FF\[134\]_687/HI
+ o_FF\[135\]_688/HI
+ o_FF\[136\]_689/HI
+ o_FF\[137\]_690/HI
+ o_FF\[138\]_691/HI
+ o_FF\[139\]_692/HI
+ o_FF\[13\]_693/HI
+ o_FF\[140\]_694/HI
+ o_FF\[141\]_695/HI
+ o_FF\[142\]_696/HI
+ o_FF\[143\]_697/HI
+ o_FF\[144\]_698/HI
+ o_FF\[145\]_699/HI
+ o_FF\[146\]_700/HI
+ o_FF\[147\]_701/HI
+ o_FF\[148\]_702/HI
+ o_FF\[149\]_703/HI
+ o_FF\[14\]_704/HI
+ o_FF\[150\]_705/HI
+ o_FF\[151\]_706/HI
+ o_FF\[152\]_707/HI
+ o_FF\[153\]_708/HI
+ o_FF\[154\]_709/HI
+ o_FF\[155\]_710/HI
+ o_FF\[156\]_711/HI
+ o_FF\[157\]_712/HI
+ o_FF\[158\]_713/HI
+ o_FF\[159\]_714/HI
+ o_FF\[15\]_715/HI
+ o_FF\[160\]_716/HI
+ o_FF\[161\]_717/HI
+ o_FF\[162\]_718/HI
+ o_FF\[163\]_719/HI
+ o_FF\[164\]_720/HI
+ o_FF\[165\]_721/HI
+ o_FF\[166\]_722/HI
+ o_FF\[167\]_723/HI
+ o_FF\[168\]_724/HI
+ o_FF\[169\]_725/HI
+ o_FF\[16\]_726/HI
+ o_FF\[170\]_727/HI
+ o_FF\[171\]_728/HI
+ o_FF\[172\]_729/HI
+ o_FF\[173\]_730/HI
+ o_FF\[174\]_731/HI
+ o_FF\[175\]_732/HI
+ o_FF\[176\]_733/HI
+ o_FF\[177\]_734/HI
+ o_FF\[178\]_735/HI
+ o_FF\[179\]_736/HI
+ o_FF\[17\]_737/HI
+ o_FF\[180\]_738/HI
+ o_FF\[181\]_739/HI
+ o_FF\[182\]_740/HI
+ o_FF\[183\]_741/HI
+ o_FF\[184\]_742/HI
+ o_FF\[185\]_743/HI
+ o_FF\[186\]_744/HI
+ o_FF\[187\]_745/HI
+ o_FF\[188\]_746/HI
+ o_FF\[189\]_747/HI
+ o_FF\[18\]_748/HI
+ o_FF\[190\]_749/HI
+ o_FF\[191\]_750/HI
+ o_FF\[192\]_751/HI
+ o_FF\[193\]_752/HI
+ o_FF\[194\]_753/HI
+ o_FF\[195\]_754/HI
+ o_FF\[196\]_755/HI
+ o_FF\[197\]_756/HI
+ o_FF\[198\]_757/HI
+ o_FF\[199\]_758/HI
+ o_FF\[19\]_759/HI
+ o_FF\[1\]_760/HI
+ o_FF\[200\]_761/HI
+ o_FF\[201\]_762/HI
+ o_FF\[202\]_763/HI
+ o_FF\[203\]_764/HI
+ o_FF\[204\]_765/HI
+ o_FF\[205\]_766/HI
+ o_FF\[206\]_767/HI
+ o_FF\[207\]_768/HI
+ o_FF\[208\]_769/HI
+ o_FF\[209\]_770/HI
+ o_FF\[20\]_771/HI
+ o_FF\[210\]_772/HI
+ o_FF\[211\]_773/HI
+ o_FF\[212\]_774/HI
+ o_FF\[213\]_775/HI
+ o_FF\[214\]_776/HI
+ o_FF\[215\]_777/HI
+ o_FF\[216\]_778/HI
+ o_FF\[217\]_779/HI
+ o_FF\[218\]/Q
+ o_FF\[218\]_780/HI
+ o_FF\[219\]/Q
+ o_FF\[219\]_781/HI
+ o_FF\[21\]_782/HI
+ o_FF\[220\]/Q
+ o_FF\[220\]_783/HI
+ o_FF\[221\]/Q
+ o_FF\[221\]_784/HI
+ o_FF\[222\]/Q
+ o_FF\[222\]_785/HI
+ o_FF\[223\]/Q
+ o_FF\[223\]_786/HI
+ o_FF\[224\]/Q
+ o_FF\[224\]_787/HI
+ o_FF\[225\]/Q
+ o_FF\[225\]_788/HI
+ o_FF\[226\]/Q
+ o_FF\[226\]_789/HI
+ o_FF\[227\]/Q
+ o_FF\[227\]_790/HI
+ o_FF\[228\]/Q
+ o_FF\[228\]_791/HI
+ o_FF\[22\]_792/HI
+ o_FF\[23\]_793/HI
+ o_FF\[24\]_794/HI
+ o_FF\[25\]_795/HI
+ o_FF\[26\]_796/HI
+ o_FF\[27\]_797/HI
+ o_FF\[28\]_798/HI
+ o_FF\[29\]_799/HI
+ o_FF\[2\]_800/HI
+ o_FF\[30\]_801/HI
+ o_FF\[31\]_802/HI
+ o_FF\[32\]_803/HI
+ o_FF\[33\]_804/HI
+ o_FF\[34\]_805/HI
+ o_FF\[35\]_806/HI
+ o_FF\[36\]_807/HI
+ o_FF\[37\]_808/HI
+ o_FF\[38\]_809/HI
+ o_FF\[39\]_810/HI
+ o_FF\[3\]_811/HI
+ o_FF\[40\]_812/HI
+ o_FF\[41\]_813/HI
+ o_FF\[42\]_814/HI
+ o_FF\[43\]_815/HI
+ o_FF\[44\]_816/HI
+ o_FF\[45\]_817/HI
+ o_FF\[46\]_818/HI
+ o_FF\[47\]_819/HI
+ o_FF\[48\]_820/HI
+ o_FF\[49\]_821/HI
+ o_FF\[4\]_822/HI
+ o_FF\[50\]_823/HI
+ o_FF\[51\]_824/HI
+ o_FF\[52\]_825/HI
+ o_FF\[53\]_826/HI
+ o_FF\[54\]_827/HI
+ o_FF\[55\]_828/HI
+ o_FF\[56\]_829/HI
+ o_FF\[57\]_830/HI
+ o_FF\[58\]_831/HI
+ o_FF\[59\]_832/HI
+ o_FF\[5\]_833/HI
+ o_FF\[60\]_834/HI
+ o_FF\[61\]_835/HI
+ o_FF\[62\]_836/HI
+ o_FF\[63\]_837/HI
+ o_FF\[64\]_838/HI
+ o_FF\[65\]_839/HI
+ o_FF\[66\]_840/HI
+ o_FF\[67\]_841/HI
+ o_FF\[68\]_842/HI
+ o_FF\[69\]_843/HI
+ o_FF\[6\]_844/HI
+ o_FF\[70\]_845/HI
+ o_FF\[71\]_846/HI
+ o_FF\[72\]_847/HI
+ o_FF\[73\]_848/HI
+ o_FF\[74\]_849/HI
+ o_FF\[75\]_850/HI
+ o_FF\[76\]_851/HI
+ o_FF\[77\]_852/HI
+ o_FF\[78\]_853/HI
+ o_FF\[79\]_854/HI
+ o_FF\[7\]_855/HI
+ o_FF\[80\]_856/HI
+ o_FF\[81\]_857/HI
+ o_FF\[82\]_858/HI
+ o_FF\[83\]_859/HI
+ o_FF\[84\]_860/HI
+ o_FF\[85\]_861/HI
+ o_FF\[86\]_862/HI
+ o_FF\[87\]_863/HI
+ o_FF\[88\]_864/HI
+ o_FF\[89\]_865/HI
+ o_FF\[8\]_866/HI
+ o_FF\[90\]_867/HI
+ o_FF\[91\]_868/HI
+ o_FF\[92\]_869/HI
+ o_FF\[93\]_870/HI
+ o_FF\[94\]_871/HI
+ o_FF\[95\]_872/HI
+ o_FF\[96\]_873/HI
+ o_FF\[97\]_874/HI
+ o_FF\[98\]_875/HI
+ o_FF\[99\]_876/HI
+ o_FF\[9\]_877/HI
+ user_clk2_FF/Q
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 19
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There is 1 unclocked register/latch pin.
+  user_clk2_FF/CLK
+Warning: There are 283 unconstrained endpoints.
+  gpio_analog[0]
+  gpio_analog[10]
+  gpio_analog[11]
+  gpio_analog[12]
+  gpio_analog[13]
+  gpio_analog[14]
+  gpio_analog[15]
+  gpio_analog[16]
+  gpio_analog[17]
+  gpio_analog[1]
+  gpio_analog[2]
+  gpio_analog[3]
+  gpio_analog[4]
+  gpio_analog[5]
+  gpio_analog[6]
+  gpio_analog[7]
+  gpio_analog[8]
+  gpio_analog[9]
+  gpio_noesd[0]
+  gpio_noesd[10]
+  gpio_noesd[11]
+  gpio_noesd[12]
+  gpio_noesd[13]
+  gpio_noesd[14]
+  gpio_noesd[15]
+  gpio_noesd[16]
+  gpio_noesd[17]
+  gpio_noesd[1]
+  gpio_noesd[2]
+  gpio_noesd[3]
+  gpio_noesd[4]
+  gpio_noesd[5]
+  gpio_noesd[6]
+  gpio_noesd[7]
+  gpio_noesd[8]
+  gpio_noesd[9]
+  io_analog[0]
+  io_analog[10]
+  io_analog[1]
+  io_analog[2]
+  io_analog[3]
+  io_analog[4]
+  io_analog[5]
+  io_analog[6]
+  io_analog[7]
+  io_analog[8]
+  io_analog[9]
+  io_clamp_high[0]
+  io_clamp_high[1]
+  io_clamp_high[2]
+  io_clamp_low[0]
+  io_clamp_low[1]
+  io_clamp_low[2]
+  o_FF[0]/D
+  o_FF[100]/D
+  o_FF[101]/D
+  o_FF[102]/D
+  o_FF[103]/D
+  o_FF[104]/D
+  o_FF[105]/D
+  o_FF[106]/D
+  o_FF[107]/D
+  o_FF[108]/D
+  o_FF[109]/D
+  o_FF[10]/D
+  o_FF[110]/D
+  o_FF[111]/D
+  o_FF[112]/D
+  o_FF[113]/D
+  o_FF[114]/D
+  o_FF[115]/D
+  o_FF[116]/D
+  o_FF[117]/D
+  o_FF[118]/D
+  o_FF[119]/D
+  o_FF[11]/D
+  o_FF[120]/D
+  o_FF[121]/D
+  o_FF[122]/D
+  o_FF[123]/D
+  o_FF[124]/D
+  o_FF[125]/D
+  o_FF[126]/D
+  o_FF[127]/D
+  o_FF[128]/D
+  o_FF[129]/D
+  o_FF[12]/D
+  o_FF[130]/D
+  o_FF[131]/D
+  o_FF[132]/D
+  o_FF[133]/D
+  o_FF[134]/D
+  o_FF[135]/D
+  o_FF[136]/D
+  o_FF[137]/D
+  o_FF[138]/D
+  o_FF[139]/D
+  o_FF[13]/D
+  o_FF[140]/D
+  o_FF[141]/D
+  o_FF[142]/D
+  o_FF[143]/D
+  o_FF[144]/D
+  o_FF[145]/D
+  o_FF[146]/D
+  o_FF[147]/D
+  o_FF[148]/D
+  o_FF[149]/D
+  o_FF[14]/D
+  o_FF[150]/D
+  o_FF[151]/D
+  o_FF[152]/D
+  o_FF[153]/D
+  o_FF[154]/D
+  o_FF[155]/D
+  o_FF[156]/D
+  o_FF[157]/D
+  o_FF[158]/D
+  o_FF[159]/D
+  o_FF[15]/D
+  o_FF[160]/D
+  o_FF[161]/D
+  o_FF[162]/D
+  o_FF[163]/D
+  o_FF[164]/D
+  o_FF[165]/D
+  o_FF[166]/D
+  o_FF[167]/D
+  o_FF[168]/D
+  o_FF[169]/D
+  o_FF[16]/D
+  o_FF[170]/D
+  o_FF[171]/D
+  o_FF[172]/D
+  o_FF[173]/D
+  o_FF[174]/D
+  o_FF[175]/D
+  o_FF[176]/D
+  o_FF[177]/D
+  o_FF[178]/D
+  o_FF[179]/D
+  o_FF[17]/D
+  o_FF[180]/D
+  o_FF[181]/D
+  o_FF[182]/D
+  o_FF[183]/D
+  o_FF[184]/D
+  o_FF[185]/D
+  o_FF[186]/D
+  o_FF[187]/D
+  o_FF[188]/D
+  o_FF[189]/D
+  o_FF[18]/D
+  o_FF[190]/D
+  o_FF[191]/D
+  o_FF[192]/D
+  o_FF[193]/D
+  o_FF[194]/D
+  o_FF[195]/D
+  o_FF[196]/D
+  o_FF[197]/D
+  o_FF[198]/D
+  o_FF[199]/D
+  o_FF[19]/D
+  o_FF[1]/D
+  o_FF[200]/D
+  o_FF[201]/D
+  o_FF[202]/D
+  o_FF[203]/D
+  o_FF[204]/D
+  o_FF[205]/D
+  o_FF[206]/D
+  o_FF[207]/D
+  o_FF[208]/D
+  o_FF[209]/D
+  o_FF[20]/D
+  o_FF[210]/D
+  o_FF[211]/D
+  o_FF[212]/D
+  o_FF[213]/D
+  o_FF[214]/D
+  o_FF[215]/D
+  o_FF[216]/D
+  o_FF[217]/D
+  o_FF[218]/D
+  o_FF[219]/D
+  o_FF[21]/D
+  o_FF[220]/D
+  o_FF[221]/D
+  o_FF[222]/D
+  o_FF[223]/D
+  o_FF[224]/D
+  o_FF[225]/D
+  o_FF[226]/D
+  o_FF[227]/D
+  o_FF[228]/D
+  o_FF[22]/D
+  o_FF[23]/D
+  o_FF[24]/D
+  o_FF[25]/D
+  o_FF[26]/D
+  o_FF[27]/D
+  o_FF[28]/D
+  o_FF[29]/D
+  o_FF[2]/D
+  o_FF[30]/D
+  o_FF[31]/D
+  o_FF[32]/D
+  o_FF[33]/D
+  o_FF[34]/D
+  o_FF[35]/D
+  o_FF[36]/D
+  o_FF[37]/D
+  o_FF[38]/D
+  o_FF[39]/D
+  o_FF[3]/D
+  o_FF[40]/D
+  o_FF[41]/D
+  o_FF[42]/D
+  o_FF[43]/D
+  o_FF[44]/D
+  o_FF[45]/D
+  o_FF[46]/D
+  o_FF[47]/D
+  o_FF[48]/D
+  o_FF[49]/D
+  o_FF[4]/D
+  o_FF[50]/D
+  o_FF[51]/D
+  o_FF[52]/D
+  o_FF[53]/D
+  o_FF[54]/D
+  o_FF[55]/D
+  o_FF[56]/D
+  o_FF[57]/D
+  o_FF[58]/D
+  o_FF[59]/D
+  o_FF[5]/D
+  o_FF[60]/D
+  o_FF[61]/D
+  o_FF[62]/D
+  o_FF[63]/D
+  o_FF[64]/D
+  o_FF[65]/D
+  o_FF[66]/D
+  o_FF[67]/D
+  o_FF[68]/D
+  o_FF[69]/D
+  o_FF[6]/D
+  o_FF[70]/D
+  o_FF[71]/D
+  o_FF[72]/D
+  o_FF[73]/D
+  o_FF[74]/D
+  o_FF[75]/D
+  o_FF[76]/D
+  o_FF[77]/D
+  o_FF[78]/D
+  o_FF[79]/D
+  o_FF[7]/D
+  o_FF[80]/D
+  o_FF[81]/D
+  o_FF[82]/D
+  o_FF[83]/D
+  o_FF[84]/D
+  o_FF[85]/D
+  o_FF[86]/D
+  o_FF[87]/D
+  o_FF[88]/D
+  o_FF[89]/D
+  o_FF[8]/D
+  o_FF[90]/D
+  o_FF[91]/D
+  o_FF[92]/D
+  o_FF[93]/D
+  o_FF[94]/D
+  o_FF[95]/D
+  o_FF[96]/D
+  o_FF[97]/D
+  o_FF[98]/D
+  o_FF[99]/D
+  o_FF[9]/D
+  user_clk2_FF/D
